@@ -43,6 +43,8 @@ jobs:
       
       - name: 执行股票分析
         env:
+          # 设置时区
+          TZ: Asia/Shanghai
           # Gemini AI
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || secrets.GEMINI_MODEL || 'gemini-3-flash-preview' }}
